@@ -1,0 +1,24 @@
+[project]
+name = "pi-4-bit-adder"
+version = "0.1.0"
+description = "Program for a 4-bit adder using a Raspberry Pi"
+readme = "README.md"
+authors = [
+    { name = "Andres Hung", email = "2018118240@ub.edu.bz" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "gpiozero>=2.0.1.post3",
+]
+
+[project.scripts]
+pi-4-bit-adder = "pi_4_bit_adder:main"
+
+[build-system]
+requires = ["uv_build>=0.12.11,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.8",
+]
