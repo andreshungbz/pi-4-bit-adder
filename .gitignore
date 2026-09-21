@@ -1,3 +1,11 @@
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -63,7 +71,13 @@ db.sqlite3-journal
 
 # Flask stuff:
 instance/
-.webassets-cache
+.webassets-cache# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
 
 # Scrapy stuff:
 .scrapy
