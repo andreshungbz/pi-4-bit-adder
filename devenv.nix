@@ -8,6 +8,7 @@
     git
     just
     just-lsp
+    lgpio
   ];
 
   # https://devenv.sh/languages/
