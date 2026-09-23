@@ -8,7 +8,6 @@
     git
     just
     just-lsp
-    lgpio
     python3Packages.gpiozero
     python3Packages.lgpio
   ];
