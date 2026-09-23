@@ -9,6 +9,8 @@
     just
     just-lsp
     lgpio
+    python3Packages.gpiozero
+    python3Packages.lgpio
   ];
 
   # https://devenv.sh/languages/
@@ -20,11 +22,6 @@
         enable = true;
         sync.enable = true;
       };
-
-      packages = with pkgs.python3Packages; [
-        gpiozero
-        lgpio
-      ];
     };
   };
 
