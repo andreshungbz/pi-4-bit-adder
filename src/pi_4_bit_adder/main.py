@@ -3,8 +3,8 @@ from time import sleep
 from gpiozero import LED, Button  # type: ignore
 
 # Define GPIO Inputs (LSB to MSB)
-A = [Button(2), Button(3), Button(4), Button(17)]  # [A0 (LSB), A1, A2, A3 (MSB)]
-B = [Button(27), Button(22), Button(10), Button(9)]  # [B0 (LSB), B1, B2, B3 (MSB)]
+A = [Button(pin, pull_up=False, active_state=True) for pin in [23, 24, 4, 17]]
+B = [Button(pin, pull_up=False, active_state=True) for pin in [27, 22, 10, 9]]
 
 # Define GPIO Outputs
 Sum_LEDs = [LED(11), LED(5), LED(6), LED(13)]  # [S0 (LSB), S1, S2, S3 (MSB)]
