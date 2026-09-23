@@ -20,6 +20,11 @@
         enable = true;
         sync.enable = true;
       };
+
+      packages = with pkgs.python3Packages; [
+        gpiozero
+        lgpio
+      ];
     };
   };
 
