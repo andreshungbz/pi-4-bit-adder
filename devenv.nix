@@ -1,16 +1,21 @@
 {
   pkgs,
+  lib,
   ...
 }:
 {
   # https://devenv.sh/packages/
-  packages = with pkgs; [
-    git
-    just
-    just-lsp
-    python3Packages.gpiozero
-    python3Packages.lgpio
-  ];
+  packages =
+    with pkgs;
+    [
+      git
+      just
+      just-lsp
+    ]
+    ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
+      python3Packages.gpiozero
+      python3Packages.lgpio
+    ];
 
   # https://devenv.sh/languages/
   languages = {
